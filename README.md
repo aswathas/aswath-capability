@@ -142,10 +142,49 @@ python scripts/install-agents.py        # register the researcher/planner/critic
 Requires Python 3.11+. `agy` and `cmdc` are optional: without them, everything
 except the delegated roast loop still works.
 
+## Working on this
+
+The checkout is the source of truth. It installs into `~/.agents/skills/` with
+one command, and the install preserves your ledger and rebuilds the index:
+
+```bash
+python install.py            # install
+python install.py --check    # show what would change
+```
+
+To upgrade: `git pull && python install.py`. Full workflow, including the
+self-evolution loop, is in [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).
+
+## How it improves itself
+
+Three of the four mechanisms are automatic:
+
+1. **Discovery.** Every rebuild indexes every skill on disk and in the
+   marketplace catalogs. New skills are found and tagged without anyone wiring
+   them up.
+2. **Scoring.** Your accept/reject writes a score that feeds ranking directly,
+   so a skill you reject stops being selected.
+3. **Gap detection.** A capability nothing covers is reported, and the
+   orchestrator writes a skill for it and proposes it for permanent life.
+
+The fourth needed building, because the taxonomy was only ever improved by
+hand and routing could quietly rot:
+
+```bash
+python scripts/taxonomy-audit.py
+```
+
+It reports skills nothing can reach (with the capability their own reference
+files point at), tags the evidence does not support, skills you keep rejecting
+that routing keeps selecting, capabilities with no local provider, and
+capabilities held on a weak signal alone. Read-only. It proposes; it never
+edits the taxonomy.
+
 ## Documentation
 
 | Document | What it answers |
 |---|---|
+| [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) | Working on it, upgrading it, and how it improves itself. |
 | [docs/architecture.md](docs/architecture.md) | The three layers, the resolution model, the promotion contract. |
 | [docs/registry.md](docs/registry.md) | How the index is built, how capability tagging works, how to sharpen it. |
 | [docs/delegation.md](docs/delegation.md) | The backends, their contracts, and the failure modes they have. |

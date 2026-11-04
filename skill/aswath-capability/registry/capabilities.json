@@ -1025,11 +1025,6 @@
         "alerting"
       ]
     },
-    "design-direction-types": {
-      "strong": [],
-      "weak": [],
-      "files": []
-    },
     "verification": {
       "strong": [],
       "weak": [],

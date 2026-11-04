@@ -176,9 +176,20 @@ The learning loop. Record outcomes, then propose what should become permanent:
 ```bash
 python scripts/record-outcome.py --skill <name> --outcome accept|reject --note "<why>"
 python scripts/record-outcome.py --propose
+python scripts/taxonomy-audit.py
 ```
 
 `--propose` prints everything worth persisting: skills you authored this session, skillsets that proved themselves, and skills that failed twice. Show it to the user. **They approve before anything is written.** Nothing lands in the global skills directory without a yes.
+
+`taxonomy-audit.py` closes the loop the other way. Discovery and scoring are automatic, but the taxonomy itself was only ever improved by hand, so routing could quietly rot. The audit reads the registry, the taxonomy and the ledger and proposes concrete edits:
+
+- **unroutable** — skills nothing can reach, with the capability their own reference files point at
+- **stale tags** — a tag the evidence does not support
+- **rejected but routed** — skills you keep rejecting that routing keeps selecting
+- **starved capabilities** — no local provider at all
+- **over-broad** — a capability held by many skills on a weak signal alone
+
+It is read-only. It proposes; it never edits the taxonomy.
 
 Then rebuild the registry so the next session routes better:
 
@@ -215,6 +226,7 @@ Report these at the end of every build. A cheaper next time is the whole point o
 | `scripts/build-registry.py` | Rebuild the index from disk + marketplace catalogs. |
 | `scripts/query-registry.py` | The resolution engine: `need`, `cap`, `gap`, `install`, `list`, `stats`. |
 | `scripts/record-outcome.py` | Ledger writes and promotion proposals. |
+| `scripts/taxonomy-audit.py` | Proposes taxonomy improvements: unroutable skills, stale tags, starved capabilities. Read-only. |
 | `scripts/stage-install.py` | Stage a marketplace plugin for approval. |
 | `scripts/install-agents.py` | Install the subagent briefs into `~/.claude/agents/` so the Agent tool can spawn them. |
 | `reference/authoring.md` | How to write a new skill that is worth keeping. |

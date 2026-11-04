@@ -7,46 +7,49 @@ Published 2026-11-04 as `urn:li:share:7523859182161276928`.
 ## The post
 
 ```
-3,114 agent skills. I needed a way to pick the right one for a request, so I built the thing that picks it.
+3,114 agent skills. I built the thing that picks the right one for a request.
 
-Then I gave it a harder job. When nothing covers what you need, it writes the missing skill, uses it, and asks before making it permanent.
+It runs on Claude Code, and when nothing covers the job, it writes the missing skill itself. Then it asks before making it permanent.
 
-That turned out to be the easy part.
+3 of the 9 bugs I hit were tools failing silently, in a way that looked exactly like success.
 
-The routing is where I got it wrong twice.
-
-First version tagged a landing page design skill as "ecommerce" because its description mentioned "product page". It designs pages. It does not build a cart. So tagging reads the files a skill ships now: if it ships reference/critique.md, it critiques.
-
-Second, I asked the reviewer "does this page look right?" and it said yes. The page still had body text at 2.8:1 contrast against a 4.5:1 minimum. It answered about the page instead of about the defect I handed it. Now every confirmed finding gets its own verdict, with the source line that proves it.
-
-9 bugs in the build. 3 of them were tools failing silently, in a way that looked exactly like success.
-
-Full write-up and the code are in the comments.
+P.S. https://github.com/aswathas/aswath-capability
 
 What are you shipping this week?
 
 #buildinpublic
 ```
 
-## First comment
+## Earlier drafts
 
-The body carries no outbound link. The repo link goes in the first comment,
-which LinkedIn treats as a separate content surface and which does not cost
-the post its reach.
+This post went live three times. The same URN was edited in place each time,
+so the live post is the final version and the earlier ones are history.
 
-```
-Full write-up and the code: https://github.com/aswathas/aswath-capability
-
-3,114 agent skills indexed, 52 capabilities, 111 duplicate entries suppressed, 9 bugs found by testing it. docs/bugs-found.md has each one with symptom, cause and how it was caught.
-```
+| Version | Chars | Change |
+|---|---|---|
+| 1 | 1,898 | Numbers-led ledger with an 8-item bullet list, GitHub link in the P.S. |
+| 2 | 1,089 | Simplified: one number, two concrete failures, link moved out of the body. |
+| 3 | 409 | Short form. One number, one stake, the link back in the P.S. per the brand voice profile's link_rule. |
 
 ## Notes on the shape
 
 | Choice | Why |
 |---|---|
-| F7, odd-precision ledger | Strongest 2026 opener. An odd number in line 1 is the single largest positive first-line signal, +34% median likes. |
+| F7, odd-precision opener | Strongest 2026 opener. An odd number in line 1 is the single largest positive first-line signal, +34% median likes. |
 | Number-first, not a question | A question as line 1 is -34% median likes. The question moves to the close, where it is +3%. |
-| No link in the body | Outbound links in the body cost reach. The link belongs in the first comment. |
-| 1,089 chars, 23 sentences | 1,000+ characters is 1.18x and 20+ sentences is 1.14x on reach. |
-| Two failures, both concrete | The stake has to be real. A contrast ratio and a mis-tagged skill beat any claim about capability. |
-| "3 of them were tools failing silently" | Precise, and it is the part a working engineer will recognise. |
+| Short band (300-500 chars) | The brand voice profile asks for a link on every post, and the skill bundle's short band keeps the body to one idea. The reach data favours 1,000+ chars (1.18x), so this is a deliberate trade against that. |
+| Link in the P.S. | The voice profile's `link_rule` requires it. A P.S. sign-off is also +7.5% on its own. |
+| One concrete stake | "3 of the 9 bugs were tools failing silently" is the kind of detail a working engineer recognises, and it is true. |
+| No product name in the body | One mention maximum, and only where it is the natural conclusion. The link carries the name. |
+
+## Notes on the platform
+
+- The post was created with `cli-anything-linkedin post create`, then edited in
+  place with `post edit`. LinkedIn keeps the same URN across edits, so the
+  permalink is stable.
+- Reading a post back is not possible. `r_member_social` does not grant it, so
+  `post show` returns 403. The create/edit response and the CLI's local
+  journal are the only record that will ever exist.
+- The comments API is not enabled for the LinkedIn app behind that token. Every
+  path under `/rest/comments` returns 404 `No virtual resource found`, so a
+  first comment has to be added by hand.
