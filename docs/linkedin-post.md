@@ -1,32 +1,52 @@
-3,114 agent skills. 111 of them were the same skill, listed three times.
+# Published LinkedIn post
 
-Nobody can hold that list in their head, so I built an index of it. Here is every number, nothing rounded:
+Published 2026-11-04 as `urn:li:share:7523859182161276928`.
 
-- local skills indexed: 253
-- plugin skills: 30
-- marketplace skills: 2,831
-- installable plugins catalogued: 3,605
-- capabilities in the taxonomy: 52
-- duplicate entries suppressed: 111
-- lines of Python: 2,182
-- defects found by testing during the build: 9
+<https://www.linkedin.com/feed/update/urn:li:share:7523859182161276928/>
 
-What it replaces: reading every SKILL.md to work out which one to call.
+## The post
 
-Routing was the part that surprised me. A skill that mentions a capability is not a provider of it, so tagging reads the reference files a skill ships: if it ships reference/critique.md, it critiques. The cheapest skill that fully covers the need wins.
+```
+3,114 agent skills. I needed a way to pick the right one for a request, so I built the thing that picks it.
 
-Then it needed to do more than route. When nothing covers what a task needs, it writes the missing skill, uses it, and asks before making it permanent.
+Then I gave it a harder job. When nothing covers what you need, it writes the missing skill, uses it, and asks before making it permanent.
 
-The surprise was not the missing skills. It was a bug where the system reported "clean" on a page whose body text still sat at 2.8:1 contrast, against a 4.5:1 minimum. The reviewer had been asked whether the page looked right, so it answered about the page rather than about the defect it was told to fix.
+That turned out to be the easy part.
 
-Verification now returns one verdict per confirmed finding, with the line of source that proves it. The diff, not the agent's own report, is the ground truth for whether a fix landed.
+The routing is where I got it wrong twice.
 
-I put it together as aswath-capability, an orchestrator skill for Claude Code that runs the whole thing: brief, feasibility, plan, build, roast, verify.
+First version tagged a landing page design skill as "ecommerce" because its description mentioned "product page". It designs pages. It does not build a cart. So tagging reads the files a skill ships now: if it ships reference/critique.md, it critiques.
 
-Engineers used to be the people who knew their tools. Now the list grows every week. The useful skill is the one that knows the list.
+Second, I asked the reviewer "does this page look right?" and it said yes. The page still had body text at 2.8:1 contrast against a 4.5:1 minimum. It answered about the page instead of about the defect I handed it. Now every confirmed finding gets its own verdict, with the source line that proves it.
+
+9 bugs in the build. 3 of them were tools failing silently, in a way that looked exactly like success.
+
+Full write-up and the code are in the comments.
 
 What are you shipping this week?
 
-P.S. Full design, the registry spec, and all nine bugs with symptom and cause: https://github.com/aswathas/aswath-capability
-
 #buildinpublic
+```
+
+## First comment
+
+The body carries no outbound link. The repo link goes in the first comment,
+which LinkedIn treats as a separate content surface and which does not cost
+the post its reach.
+
+```
+Full write-up and the code: https://github.com/aswathas/aswath-capability
+
+3,114 agent skills indexed, 52 capabilities, 111 duplicate entries suppressed, 9 bugs found by testing it. docs/bugs-found.md has each one with symptom, cause and how it was caught.
+```
+
+## Notes on the shape
+
+| Choice | Why |
+|---|---|
+| F7, odd-precision ledger | Strongest 2026 opener. An odd number in line 1 is the single largest positive first-line signal, +34% median likes. |
+| Number-first, not a question | A question as line 1 is -34% median likes. The question moves to the close, where it is +3%. |
+| No link in the body | Outbound links in the body cost reach. The link belongs in the first comment. |
+| 1,089 chars, 23 sentences | 1,000+ characters is 1.18x and 20+ sentences is 1.14x on reach. |
+| Two failures, both concrete | The stake has to be real. A contrast ratio and a mis-tagged skill beat any claim about capability. |
+| "3 of them were tools failing silently" | Precise, and it is the part a working engineer will recognise. |
