@@ -34,6 +34,9 @@ Both problems have the same shape, and the same answer: a registry.
 | Lines of Python | 2,182 |
 | Defects found by testing during the build | 9 |
 
+Write-up published on LinkedIn:
+[3,114 agent skills. 111 of them were the same skill, listed three times.](https://www.linkedin.com/feed/update/urn:li:share:7523859182161276928/)
+
 ## Three layers
 
 | Layer | What it is | Who owns it |
