@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+*.tmp
+*.log
+
+# generated registry - machine specific, rebuilt by scripts/build-registry.py
+skill/aswath-capability/registry/skills.json
+
+# personal state - never committed
+skill/aswath-capability/registry/ledger.json
+skill/aswath-capability/registry/staged.json

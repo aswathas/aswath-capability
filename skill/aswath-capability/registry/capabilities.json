@@ -1,0 +1,1042 @@
+{
+  "_comment": "Capability taxonomy with THREE evidence channels. 'strong' keywords may match anywhere in a skill's description. 'weak' keywords only count when they appear in the skill NAME. 'files' keywords match the reference files a skill ships - the strongest signal of all, because a skill that ships reference/critique.md critiques. Rationale: a landing-page design skill that mentions 'product page' is not a provider of ecommerce capability, but a skill named 'shopify-cart' is, and a skill shipping reference/cart.md is. Edit here to sharpen routing, then rerun scripts/build-registry.py.",
+  "_exclude": [
+    "aswath-capability"
+  ],
+  "_exclude_reason": "Router skills describe TRIGGER PHRASES ('build me an ecommerce site'), not capabilities they provide. Letting them self-tag makes the orchestrator compete with the skills it dispatches.",
+  "capabilities": {
+    "design-direction": {
+      "strong": [
+        "art direction",
+        "visual design",
+        "aesthetic direction",
+        "design language",
+        "visual identity",
+        "gallery sites",
+        "one page love",
+        "awwwards",
+        "deslop",
+        "spacing, hierarchy, typography"
+      ],
+      "weak": [
+        "typography",
+        "palette",
+        "distinctive",
+        "branding",
+        "aesthetic"
+      ],
+      "files": [
+        "direction",
+        "craft",
+        "typeset",
+        "fonts",
+        "type",
+        "palette",
+        "palettes",
+        "texture",
+        "imagery",
+        "brand-truth",
+        "anatomy",
+        "macrostructures",
+        "macrostructure",
+        "genres",
+        "specimen",
+        "comp"
+      ]
+    },
+    "design-critique": {
+      "strong": [
+        "critique",
+        "redesign",
+        "design review",
+        "roast",
+        "ux review",
+        "look-and-fix",
+        "review the design",
+        "critique this design",
+        "design audit",
+        "review-finish",
+        "deslop",
+        "audit an existing product surface",
+        "review an existing interface",
+        "critique an existing"
+      ],
+      "weak": [
+        "critique the",
+        "polish"
+      ],
+      "files": [
+        "critique",
+        "review-finish",
+        "review-hero",
+        "redesign",
+        "roast",
+        "finish-review",
+        "component-review",
+        "critique-ux"
+      ]
+    },
+    "design-inspect": {
+      "strong": [
+        "real-browser",
+        "browser inspector",
+        "visual regression",
+        "look-and-fix",
+        "screenshot"
+      ],
+      "weak": [
+        "inspect",
+        "browser"
+      ],
+      "files": [
+        "inspect",
+        "screenshot",
+        "lint",
+        "evals",
+        "stage",
+        "draw"
+      ]
+    },
+    "design-system": {
+      "strong": [
+        "design system",
+        "design tokens",
+        "style guide",
+        "theme factory",
+        "component library"
+      ],
+      "weak": [
+        "tokens",
+        "theme"
+      ],
+      "files": [
+        "design-md",
+        "tokens",
+        "theme",
+        "design-system",
+        "palette",
+        "palettes"
+      ]
+    },
+    "design-motion": {
+      "strong": [
+        "motion design",
+        "animation",
+        "micro-interaction",
+        "animate",
+        "look-and-fix"
+      ],
+      "weak": [
+        "motion"
+      ],
+      "files": [
+        "animate",
+        "animation",
+        "motion",
+        "motions",
+        "microinteractions",
+        "scroll-choreography",
+        "interaction-and-states"
+      ]
+    },
+    "design-accessibility": {
+      "strong": [
+        "accessibility",
+        "wcag",
+        "screen reader",
+        "a11y",
+        "contrast ratio"
+      ],
+      "weak": [],
+      "files": [
+        "a11y",
+        "accessibility",
+        "wcag",
+        "harden"
+      ]
+    },
+    "design-copy": {
+      "strong": [
+        "ux copy",
+        "microcopy",
+        "tone of voice",
+        "copywriting",
+        "ux writing"
+      ],
+      "weak": [
+        "copy"
+      ],
+      "files": [
+        "copy",
+        "typeset",
+        "voice",
+        "tone",
+        "copywriting"
+      ]
+    },
+    "ui-implementation": {
+      "strong": [
+        "landing page",
+        "marketing site",
+        "hero section",
+        "build ui",
+        "implement ui",
+        "frontend design",
+        "web page",
+        "app screen",
+        "dashboard ui",
+        "portfolio site",
+        "deslop"
+      ],
+      "weak": [
+        "frontend",
+        "react",
+        "next.js",
+        "vue",
+        "svelte",
+        "tailwind",
+        "css",
+        "baseline-ui",
+        "component-canvas",
+        "create-canvas",
+        "ui-skills-root"
+      ],
+      "files": [
+        "implement",
+        "app-screens",
+        "app-screen",
+        "new-work",
+        "craft",
+        "components"
+      ]
+    },
+    "planning": {
+      "strong": [
+        "implementation plan",
+        "phased implementation",
+        "project plan",
+        "roadmap",
+        "milestone",
+        "break down"
+      ],
+      "weak": [
+        "plan",
+        "todo"
+      ],
+      "files": [
+        "plan",
+        "roadmap",
+        "milestone",
+        "phase",
+        "phases"
+      ]
+    },
+    "research": {
+      "strong": [
+        "research",
+        "feasibility",
+        "gather information",
+        "survey the options",
+        "investigate",
+        "look into"
+      ],
+      "weak": [
+        "compare options",
+        "find out"
+      ],
+      "files": [
+        "research",
+        "sites",
+        "directions",
+        "tells",
+        "photos"
+      ]
+    },
+    "architecture": {
+      "strong": [
+        "system design",
+        "module structure",
+        "architect",
+        "data model",
+        "api design",
+        "schema design",
+        "domain model",
+        "adr",
+        "glossary",
+        "deep module"
+      ],
+      "weak": [
+        "architecture",
+        "schema"
+      ],
+      "files": [
+        "architect",
+        "schema",
+        "data-model",
+        "adr",
+        "glossary",
+        "domain-model",
+        "domain"
+      ]
+    },
+    "debugging": {
+      "strong": [
+        "debug",
+        "diagnose",
+        "root cause",
+        "troubleshoot",
+        "failing test",
+        "performance regression",
+        "error trace",
+        "stack trace"
+      ],
+      "weak": [
+        "bug",
+        "broken"
+      ],
+      "files": [
+        "debug",
+        "diagnos",
+        "troubleshoot",
+        "root-cause",
+        "debugging"
+      ]
+    },
+    "testing": {
+      "strong": [
+        "test-driven",
+        "unit test",
+        "integration test",
+        "formal verification",
+        "test coverage",
+        "assertion",
+        "tdd"
+      ],
+      "weak": [
+        "test",
+        "verification"
+      ],
+      "files": [
+        "test",
+        "tests",
+        "verif",
+        "eval",
+        "evals",
+        "spec"
+      ]
+    },
+    "code-review": {
+      "strong": [
+        "code review",
+        "review the diff",
+        "review changes",
+        "standards review",
+        "spec review",
+        "pull request review"
+      ],
+      "weak": [
+        "review"
+      ],
+      "files": [
+        "code-review",
+        "review"
+      ]
+    },
+    "refactoring": {
+      "strong": [
+        "refactor",
+        "simplify the code",
+        "clean up",
+        "altitude cleanup",
+        "dedupe",
+        "surgical patch",
+        "reduce complexity"
+      ],
+      "weak": [
+        "simplify"
+      ],
+      "files": [
+        "refactor",
+        "simplif",
+        "clean",
+        "dedupe",
+        "altitude"
+      ]
+    },
+    "deployment": {
+      "strong": [
+        "deploy to production",
+        "deployment",
+        "release the version",
+        "publish to production",
+        "vercel deploy",
+        "build and release",
+        "version bump",
+        "ship to prod"
+      ],
+      "weak": [
+        "release",
+        "publish"
+      ],
+      "files": [
+        "deploy",
+        "release",
+        "publish"
+      ]
+    },
+    "version-control": {
+      "strong": [
+        "git worktree",
+        "commit message",
+        "pull request",
+        "rebase",
+        "branch strategy",
+        "conventional commit"
+      ],
+      "weak": [
+        "git",
+        "commit",
+        "branch"
+      ],
+      "files": [
+        "commit",
+        "git",
+        "branch",
+        "worktree",
+        "rebase",
+        "pull-request"
+      ]
+    },
+    "documentation": {
+      "strong": [
+        "write documentation",
+        "technical spec",
+        "decision doc",
+        "proposal",
+        "readme",
+        "design document"
+      ],
+      "weak": [
+        "document",
+        "docs"
+      ],
+      "files": [
+        "document",
+        "writeup",
+        "design-doc",
+        "designdocument"
+      ]
+    },
+    "writing": {
+      "strong": [
+        "blog post",
+        "newsletter",
+        "article",
+        "internal comm",
+        "status report",
+        "linkedin post",
+        "ghostwrite"
+      ],
+      "weak": [
+        "writing",
+        "copy"
+      ],
+      "files": [
+        "writing",
+        "blog",
+        "article",
+        "newsletter",
+        "ghostwrite"
+      ]
+    },
+    "memory": {
+      "strong": [
+        "claude-mem",
+        "memory database",
+        "search memory",
+        "past observations",
+        "observation capture",
+        "recall"
+      ],
+      "weak": [
+        "memory",
+        "remember"
+      ],
+      "files": [
+        "memory",
+        "observation",
+        "observations",
+        "timeline",
+        "corpus"
+      ]
+    },
+    "orchestration": {
+      "strong": [
+        "orchestrat",
+        "subagent",
+        "multi-agent",
+        "fan out",
+        "dispatch parallel",
+        "chief of staff",
+        "worktree",
+        "coordinat"
+      ],
+      "weak": [
+        "workflow",
+        "coordinate"
+      ],
+      "files": [
+        "orchestrat",
+        "dispatch",
+        "fan-out",
+        "coordina"
+      ]
+    },
+    "skill-authoring": {
+      "strong": [
+        "author a skill",
+        "create a skill",
+        "skill template",
+        "write skills",
+        "skill creator",
+        "new skill",
+        "skill manifest",
+        "smallest useful ui skills context"
+      ],
+      "weak": [
+        "skill"
+      ],
+      "files": [
+        "skill-template",
+        "template-skill",
+        "skill-creator",
+        "skill-authoring"
+      ]
+    },
+    "mcp-builder": {
+      "strong": [
+        "mcp server",
+        "model context protocol",
+        "build an mcp",
+        "mcp tool",
+        "fastmcp"
+      ],
+      "weak": [
+        "mcp"
+      ]
+    },
+    "data": {
+      "strong": [
+        "spreadsheet",
+        "csv",
+        "data pipeline",
+        "database schema",
+        "sql query",
+        "orm model"
+      ],
+      "weak": [
+        "data",
+        "database"
+      ],
+      "files": [
+        "spreadsheet",
+        "csv",
+        "sql",
+        "database",
+        "schema",
+        "pipeline"
+      ]
+    },
+    "documents": {
+      "strong": [
+        ".docx",
+        "word document",
+        "pdf",
+        "powerpoint",
+        "pptx",
+        "slide deck",
+        "excel"
+      ],
+      "weak": [],
+      "files": [
+        "docx",
+        "pdf",
+        "pptx",
+        "powerpoint",
+        "slide"
+      ]
+    },
+    "browser": {
+      "strong": [
+        "puppeteer",
+        "playwright",
+        "headless browser",
+        "navigate to url",
+        "scrape a page"
+      ],
+      "weak": [
+        "browser"
+      ],
+      "files": [
+        "browser",
+        "puppeteer",
+        "playwright",
+        "scrape"
+      ]
+    },
+    "integrations-gmail": {
+      "strong": [
+        "gmail",
+        "google mail",
+        "email thread",
+        "inbox triage",
+        "unread inbox",
+        "reply-all"
+      ],
+      "weak": [],
+      "files": [
+        "gmail",
+        "email",
+        "inbox",
+        "mail"
+      ]
+    },
+    "integrations-calendar": {
+      "strong": [
+        "google calendar",
+        "calendar event",
+        "meeting agenda",
+        "upcoming events"
+      ],
+      "weak": [],
+      "files": [
+        "calendar",
+        "agenda",
+        "meeting"
+      ]
+    },
+    "integrations-drive": {
+      "strong": [
+        "google drive",
+        "drive file",
+        "shared drive",
+        "upload file"
+      ],
+      "weak": [],
+      "files": [
+        "drive",
+        "upload"
+      ]
+    },
+    "integrations-sheets": {
+      "strong": [
+        "google sheets",
+        "spreadsheet values",
+        "sheet range"
+      ],
+      "weak": [],
+      "files": [
+        "sheets",
+        "range"
+      ]
+    },
+    "integrations-tasks": {
+      "strong": [
+        "google tasks",
+        "task list entry"
+      ],
+      "weak": [],
+      "files": [
+        "tasks"
+      ]
+    },
+    "integrations-docs": {
+      "strong": [
+        "google docs",
+        "document append",
+        "docs api"
+      ],
+      "weak": [],
+      "files": [
+        "gdocs",
+        "docs"
+      ]
+    },
+    "cost-tokens": {
+      "strong": [
+        "token usage",
+        "cost report",
+        "spend",
+        "budget",
+        "usage report",
+        "bill",
+        "context window"
+      ],
+      "weak": [
+        "cost",
+        "tokens"
+      ],
+      "files": [
+        "cost",
+        "usage",
+        "token",
+        "tokens"
+      ]
+    },
+    "image-generation": {
+      "strong": [
+        "generate an image",
+        "illustration",
+        "poster",
+        "canvas art",
+        "algorithmic art",
+        "image prompt"
+      ],
+      "weak": [
+        "image",
+        "photo"
+      ],
+      "files": [
+        "image",
+        "photo",
+        "canvas",
+        "poster",
+        "art",
+        "hero",
+        "heroes"
+      ]
+    },
+    "diagrams": {
+      "strong": [
+        "diagram",
+        "flowchart",
+        "mermaid",
+        "excalidraw",
+        "architecture picture",
+        "sequence diagram"
+      ],
+      "weak": [
+        "visualise",
+        "draw"
+      ],
+      "files": [
+        "diagram",
+        "excalidraw",
+        "mermaid",
+        "board"
+      ]
+    },
+    "marketplace": {
+      "strong": [
+        "find a skill",
+        "discover skills",
+        "install skill",
+        "marketplace",
+        "cli catalog",
+        "agent-native cli",
+        "plugin directory"
+      ],
+      "weak": [
+        "install",
+        "catalog"
+      ],
+      "files": [
+        "marketplace",
+        "catalog",
+        "registry"
+      ]
+    },
+    "social-linkedin": {
+      "strong": [
+        "linkedin",
+        "content calendar",
+        "engagement analytics",
+        "post to linkedin"
+      ],
+      "weak": [],
+      "files": [
+        "linkedin",
+        "post",
+        "engagement",
+        "calendar-content"
+      ]
+    },
+    "video-audio": {
+      "strong": [
+        "subtitle",
+        "transcript",
+        "podcast",
+        "audio",
+        "video edit"
+      ],
+      "weak": [],
+      "files": [
+        "subtitle",
+        "transcript",
+        "podcast",
+        "audio",
+        "video"
+      ]
+    },
+    "ecommerce": {
+      "strong": [
+        "shopping cart",
+        "add to cart",
+        "ecommerce site",
+        "e-commerce",
+        "storefront",
+        "shopify",
+        "woocommerce",
+        "stripe checkout",
+        "checkout flow",
+        "product catalog builder",
+        "cart page"
+      ],
+      "weak": [],
+      "files": [
+        "cart",
+        "checkout",
+        "storefront",
+        "shopify",
+        "woocommerce",
+        "commerce"
+      ]
+    },
+    "payments": {
+      "strong": [
+        "stripe",
+        "payment gateway",
+        "billing system",
+        "subscription management",
+        "invoice generation",
+        "payout",
+        "payment intent"
+      ],
+      "weak": [
+        "payment",
+        "checkout"
+      ],
+      "files": [
+        "stripe",
+        "billing",
+        "payment",
+        "payments",
+        "invoice",
+        "payout",
+        "subscription"
+      ]
+    },
+    "auth": {
+      "strong": [
+        "authentication",
+        "oauth",
+        "sign in",
+        "log in",
+        "session management",
+        "jwt",
+        "sso",
+        "password reset",
+        "magic link"
+      ],
+      "weak": [
+        "login",
+        "auth"
+      ],
+      "files": [
+        "oauth",
+        "jwt",
+        "sso",
+        "authentication",
+        "login",
+        "session"
+      ]
+    },
+    "api": {
+      "strong": [
+        "rest api",
+        "graphql",
+        "openapi",
+        "webhook",
+        "api endpoint",
+        "sdk client",
+        "api route handler"
+      ],
+      "weak": [
+        "api"
+      ],
+      "files": [
+        "openapi",
+        "graphql",
+        "webhook",
+        "api",
+        "rest"
+      ]
+    },
+    "database": {
+      "strong": [
+        "schema migration",
+        "postgres",
+        "sqlite",
+        "prisma",
+        "orm model",
+        "database migration",
+        "sql table"
+      ],
+      "weak": [
+        "database",
+        "schema"
+      ]
+    },
+    "forms": {
+      "strong": [
+        "form validation",
+        "multi-step form",
+        "form submission",
+        "input field",
+        "form builder"
+      ],
+      "weak": [
+        "form"
+      ],
+      "files": [
+        "form",
+        "forms",
+        "validation"
+      ]
+    },
+    "seo": {
+      "strong": [
+        "seo",
+        "meta tags",
+        "sitemap",
+        "open graph",
+        "structured data",
+        "search ranking",
+        "canonical url"
+      ],
+      "weak": [],
+      "files": [
+        "seo",
+        "sitemap",
+        "meta",
+        "canonical",
+        "open-graph"
+      ]
+    },
+    "analytics": {
+      "strong": [
+        "product analytics",
+        "event tracking",
+        "conversion funnel",
+        "analytics dashboard",
+        "tracking pixel"
+      ],
+      "weak": [
+        "analytics",
+        "tracking"
+      ],
+      "files": [
+        "analytics",
+        "tracking",
+        "funnel",
+        "events"
+      ]
+    },
+    "content-cms": {
+      "strong": [
+        "headless cms",
+        "content management system",
+        "blog post authoring",
+        "sanity",
+        "contentful",
+        "markdown content pipeline"
+      ],
+      "weak": [
+        "cms",
+        "content"
+      ],
+      "files": [
+        "cms",
+        "content",
+        "blog",
+        "markdown",
+        "sanity",
+        "contentful"
+      ]
+    },
+    "email-marketing": {
+      "strong": [
+        "newsletter",
+        "email campaign",
+        "mailchimp",
+        "drip campaign",
+        "email sequence",
+        "newsletter signup"
+      ],
+      "weak": [],
+      "files": [
+        "newsletter",
+        "campaign",
+        "drip",
+        "sequence"
+      ]
+    },
+    "concurrency": {
+      "strong": [
+        "race condition",
+        "concurrency",
+        "idempotent",
+        "retry",
+        "mutex",
+        "deadlock",
+        "worker queue"
+      ],
+      "weak": [
+        "queue",
+        "lock",
+        "parallel"
+      ],
+      "files": [
+        "concurrency",
+        "race",
+        "lock",
+        "queue",
+        "idempotent",
+        "retry",
+        "worker"
+      ]
+    },
+    "observability": {
+      "strong": [
+        "logging",
+        "monitoring",
+        "tracing",
+        "sentry",
+        "error tracking",
+        "alerting",
+        "structured logs"
+      ],
+      "weak": [],
+      "files": [
+        "logging",
+        "monitoring",
+        "tracing",
+        "sentry",
+        "alerting"
+      ]
+    },
+    "design-direction-types": {
+      "strong": [],
+      "weak": [],
+      "files": []
+    },
+    "verification": {
+      "strong": [],
+      "weak": [],
+      "files": [
+        "verification",
+        "verify"
+      ]
+    }
+  }
+}
