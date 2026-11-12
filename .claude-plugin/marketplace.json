@@ -1,0 +1,14 @@
+{
+  "name": "aswath-capability",
+  "owner": {
+    "name": "aswathas",
+    "url": "https://github.com/aswathas"
+  },
+  "plugins": [
+    {
+      "name": "aswath-capability",
+      "source": "./",
+      "description": "An orchestrator skill for Claude Code that indexes skills, detects gaps, and delegates loops."
+    }
+  ]
+}
