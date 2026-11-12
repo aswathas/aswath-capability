@@ -1,0 +1,13 @@
+{
+  "name": "aswath-capability",
+  "description": "An orchestrator skill for Claude Code that indexes skills, detects gaps, and delegates loops.",
+  "version": "1.0.0",
+  "author": {
+    "name": "aswathas",
+    "url": "https://github.com/aswathas"
+  },
+  "homepage": "https://github.com/aswathas/aswath-capability",
+  "repository": "https://github.com/aswathas/aswath-capability",
+  "license": "MIT",
+  "skills": ["./skill/aswath-capability"]
+}
